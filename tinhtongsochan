@@ -1,0 +1,17 @@
+package BT;
+
+import java.util.Scanner;
+
+public class TongSoChan {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap n: ");
+        int n = sc.nextInt();
+
+        int k = n / 2;
+        System.out.println("Tong = " + k * (k + 1));
+
+        sc.close();
+    }
+}
