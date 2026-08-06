@@ -1,0 +1,35 @@
+
+import java.util.Scanner;
+
+public class xeploaihocluc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ma SV: ");
+        String ma = sc.nextLine();
+        System.out.print("Ho ten: ");
+        String ten = sc.nextLine();
+
+        double cc = sc.nextDouble();
+        double gk = sc.nextDouble();
+        double ck = sc.nextDouble();
+
+        if (cc < 0 || cc > 10 || gk < 0 || gk > 10 || ck < 0 || ck > 10) {
+            System.out.println("Diem khong hop le!");
+            return;
+        }
+
+        double tong = cc * 0.1 + gk * 0.3 + ck * 0.6;
+
+        char xl;
+        if (tong >= 8.5) xl = 'A';
+        else if (tong >= 7) xl = 'B';
+        else if (tong >= 5.5) xl = 'C';
+        else if (tong >= 4) xl = 'D';
+        else xl = 'F';
+
+        System.out.printf("%s - %s - %.2f - %c", ma, ten, tong, xl);
+
+        sc.close();
+    }
+}
